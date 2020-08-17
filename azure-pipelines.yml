@@ -47,11 +47,11 @@ steps:
    script: |
     ls
     
-# - task: DotNetCoreCLI@2
-#   displayName: 'publish'
-#   inputs:
-#     command: 'publish'
-#     publishWebProjects: false
+- task: DotNetCoreCLI@2
+  displayName: 'publish'
+  inputs:
+    command: 'publish'
+   # publishWebProjects: false
 - task: CmdLine@2
   displayName: 'publish'
   inputs:
