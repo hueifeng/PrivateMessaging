@@ -60,6 +60,7 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: false
+    includesymbols: true
     
 - task: CmdLine@2
   displayName: 'drop database'
