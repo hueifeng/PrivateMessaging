@@ -59,7 +59,7 @@ steps:
   displayName: 'publish'
   inputs:
     command: 'publish'
-    publishWebProjects: true
+    publishWebProjects: false
     
 - task: CmdLine@2
   displayName: 'drop database'
