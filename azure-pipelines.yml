@@ -48,10 +48,10 @@ steps:
     dotnet publish
     
 - task: CmdLine@2
-  displayName: 'drop database'
+  displayName: 'build efcore migrations'
   inputs:
     script: |
-      dotnet ef database drop --project host/EasyAbp.PrivateMessaging.Web.Unified/EasyAbp.PrivateMessaging.Web.Unified.csproj -f
+       dotnet ef migrations script --project host/EasyAbp.PrivateMessaging.Web.Unified/EasyAbp.PrivateMessaging.Web.Unified.csproj -o $(Build.ArtifactStagingDirectory)/migrations/scripts.sql -i
 - task: CmdLine@2
   displayName: 'update database'
   inputs:
