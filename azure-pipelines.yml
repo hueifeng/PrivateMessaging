@@ -40,18 +40,7 @@ steps:
   displayName: 'build'
   inputs:
     command: 'build'
-
-- task: CmdLine@2
-  displayName: 'output files'
-  inputs:
-   script: |
-    ls
     
-- task: DotNetCoreCLI@2
-  displayName: 'publish'
-  inputs:
-    command: 'publish'
-   # publishWebProjects: false
 - task: CmdLine@2
   displayName: 'publish'
   inputs:
