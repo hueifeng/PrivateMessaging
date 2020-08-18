@@ -47,11 +47,11 @@ steps:
    script: |
     dotnet publish
     
-- task: CmdLine@2
-  displayName: 'build efcore migrations'
-  inputs:
-    script: |
-       dotnet ef migrations script --project host/EasyAbp.PrivateMessaging.Web.Unified/EasyAbp.PrivateMessaging.Web.Unified.csproj -o $(Build.ArtifactStagingDirectory)/migrations/scripts.sql -i
+# - task: CmdLine@2
+#   displayName: 'build efcore migrations'
+#   inputs:
+#     script: |
+#        dotnet ef migrations script --project host/EasyAbp.PrivateMessaging.Web.Unified/EasyAbp.PrivateMessaging.Web.Unified.csproj -o $(Build.ArtifactStagingDirectory)/migrations/scripts.sql -i
 - task: CmdLine@2
   displayName: 'update database'
   inputs:
